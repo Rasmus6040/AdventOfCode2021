@@ -7,8 +7,9 @@ public class Exercise1
     public int GetResult()
     {
         var values = _puzzleInput.Select(line => 
-            line.ToList().Find(x => Int32.TryParse(x.ToString(), out _)).ToString() + 
-            line.ToList().FindLast(x => Int32.TryParse(x.ToString(), out _))).Aggregate(0, (sum, x) => Int32.TryParse(x, out var xInt) ? xInt+sum : sum);
+            line.ToList().Find(x => int.TryParse(x.ToString(), out _)).ToString() + 
+            line.ToList().FindLast(x => int.TryParse(x.ToString(), out _)))
+            .Aggregate(0, (sum, x) => int.TryParse(x, out var xInt) ? xInt+sum : sum);
         return values;
     }    
 }
