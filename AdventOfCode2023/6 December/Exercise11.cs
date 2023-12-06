@@ -6,6 +6,20 @@ public class Exercise11
 
     public int GetResult()
     {
-        return 1;
-    }    
+        var races = _puzzleInput.Select(x => x.Split(" ", StringSplitOptions.RemoveEmptyEntries)).ToList();
+        var result = 1;
+        for (var i = 1; i < races.First().Length; i++)
+        {
+            result *= BoatTravel(int.Parse(races.First()[i]), int.Parse(races.Last()[i]), 0);
+        }
+
+        return result;
+    }
+
+    private static int BoatTravel(int time, int dist, int currentSpeed)
+    {
+        if (currentSpeed == time) return 0;
+        var record = (time - currentSpeed) * currentSpeed > dist ? 1 : 0;
+        return record + BoatTravel(time, dist, currentSpeed + 1);
+    }
 }
