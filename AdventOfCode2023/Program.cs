@@ -31,8 +31,7 @@ Console.WriteLine($"Result from exercise 7: {exercise7.GetResult()}");
 Exercise8 exercise8 = new();
 Console.WriteLine($"Result from exercise 8: {exercise8.GetResult()}");
 
-Exercise9 exercise9 = new();
-Console.WriteLine($"Result from exercise 9: {exercise9.GetResult()}");
+Console.WriteLine($"Result from exercise 9: {Exercise9.GetResult()}");
 
 Exercise10 exercise10 = new();
 Console.WriteLine($"Result from exercise 10: {exercise10.GetResult()}");
