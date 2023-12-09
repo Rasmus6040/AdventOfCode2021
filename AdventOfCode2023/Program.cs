@@ -1,4 +1,5 @@
 ﻿using AdventOfCode2023._1_December;
+using AdventOfCode2023._10_December;
 using AdventOfCode2023._2_December;
 using AdventOfCode2023._3_December;
 using AdventOfCode2023._4_December;
@@ -6,6 +7,7 @@ using AdventOfCode2023._5_December;
 using AdventOfCode2023._6_December;
 using AdventOfCode2023._7_December;
 using AdventOfCode2023._8_December;
+using AdventOfCode2023._9_December;
 
 Exercise1 exercise1 = new();
 Console.WriteLine($"Result from exercise 1: {exercise1.GetResult()}");
@@ -53,3 +55,16 @@ Console.WriteLine($"Result from exercise 15: {exercise15.GetResult()}");
 
 Exercise16 exercise16 = new();
 Console.WriteLine($"Result from exercise 16: {exercise16.GetResult()}");
+
+Exercise17 exercise17 = new();
+Console.WriteLine($"Result from exercise 17: {exercise17.GetResult()}");
+
+Exercise18 exercise18 = new();
+Console.WriteLine($"Result from exercise 18: {exercise18.GetResult()}");
+
+
+Exercise19 exercise19 = new();
+Console.WriteLine($"Result from exercise 19: {exercise19.GetResult()}");
+
+Exercise20 exercise20 = new();
+Console.WriteLine($"Result from exercise 20: {exercise20.GetResult()}");
