@@ -15,6 +15,7 @@ public class Exercise2
             result += doesItWork[1..].Sum(GetResultOfDoSection);
         }
         return result;
+        // First guess: 89798695
     }
 
     private int GetResultOfDoSection(string doSection)
