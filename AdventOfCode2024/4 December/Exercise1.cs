@@ -6,68 +6,45 @@ public class Exercise1
 
     public int GetResult()
     {
+        var directions = new (int dx, int dy)[]
+        {
+            (0, 1),   // Horizontal right
+            (0, -1),  // Horizontal left
+            (1, 0),   // Vertical down
+            (-1, 0),  // Vertical up
+            (1, 1),   // Diagonal right down
+            (-1, -1), // Diagonal left up
+            (1, -1),  // Diagonal left down
+            (-1, 1)   // Diagonal right up
+        };
+
         var counter = 0;
+
         for (var i = 0; i < _puzzleInput.Length; i++)
         {
             for (var j = 0; j < _puzzleInput[i].Length; j++)
             {
-                // X can be in the Vertical in the direction down
-                if (i < _puzzleInput.Length - 3)
+                foreach (var (dx, dy) in directions)
                 {
-                    if(_puzzleInput[i][j] == 'X' && _puzzleInput[i+1][j] == 'M' && _puzzleInput[i+2][j] == 'A' && _puzzleInput[i+3][j] == 'S')
-                        counter++;
-                    // X can be in the diagonal to the right down
-                    if (j < _puzzleInput[i].Length - 3)
-                    {
-                        if(_puzzleInput[i][j] == 'X' && _puzzleInput[i+1][j+1] == 'M' && _puzzleInput[i+2][j+2] == 'A' && _puzzleInput[i+3][j+3] == 'S')
-                            counter++;
-                    }
-
-                    // X can be in the diagonal to the left down
-                    if (j > 2)
-                    {
-                        if(_puzzleInput[i][j] == 'X' && _puzzleInput[i+1][j-1] == 'M' && _puzzleInput[i+2][j-2] == 'A' && _puzzleInput[i+3][j-3] == 'S')
-                            counter++;
-                    }
-                }
-                
-                
-
-                // X can be in the Vertical in the direction up
-                if (i > 2)
-                {
-                    if(_puzzleInput[i][j] == 'X' && _puzzleInput[i-1][j] == 'M' && _puzzleInput[i-2][j] == 'A' && _puzzleInput[i-3][j] == 'S')
-                        counter++;
-                    // X can be in the diagonal to the right up
-                    if (j < _puzzleInput[i].Length - 3)
-                    {
-                        if(_puzzleInput[i][j] == 'X' && _puzzleInput[i-1][j+1] == 'M' && _puzzleInput[i-2][j+2] == 'A' && _puzzleInput[i-3][j+3] == 'S')
-                            counter++;
-                    }
-
-                    // X can be in the diagonal to the left up
-                    if (j > 2)
-                    {
-                        if(_puzzleInput[i][j] == 'X' && _puzzleInput[i-1][j-1] == 'M' && _puzzleInput[i-2][j-2] == 'A' && _puzzleInput[i-3][j-3] == 'S')
-                            counter++;
-                    }
-                }
-                
-                // X can be in the horizontal to the right
-                if (j < _puzzleInput[i].Length - 3)
-                {
-                    if(_puzzleInput[i][j] == 'X' && _puzzleInput[i][j+1] == 'M' && _puzzleInput[i][j+2] == 'A' && _puzzleInput[i][j+3] == 'S')
-                        counter++;
-                }
-
-                // X can be in the horizontal to the left
-                if (j > 2)
-                {
-                    if(_puzzleInput[i][j] == 'X' && _puzzleInput[i][j-1] == 'M' && _puzzleInput[i][j-2] == 'A' && _puzzleInput[i][j-3] == 'S')
+                    if (IsMatch(i, j, dx, dy))
                         counter++;
                 }
             }
         }
+
         return counter;
+
+        bool IsMatch(int x, int y, int dx, int dy)
+        {
+            for (int k = 0; k < 4; k++)
+            {
+                int nx = x + k * dx;
+                int ny = y + k * dy;
+
+                if (nx < 0 || ny < 0 || nx >= _puzzleInput.Length || ny >= _puzzleInput[x].Length || _puzzleInput[nx][ny] != "XMAS"[k])
+                    return false;
+            }
+            return true;
+        }
     }
 }
