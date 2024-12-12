@@ -64,8 +64,14 @@ using AdventOfCode2024._1_December;
 // AdventOfCode2024._10_December.Exercise2 exercise10_2 = new();
 // Console.WriteLine($"Result from exercise 2: {exercise10_2.GetResult()}");
 
-AdventOfCode2024._11_December.Exercise1 exercise11_1 = new();
-Console.WriteLine($"Result from exercise 1: {exercise11_1.GetResult()}");
+// AdventOfCode2024._11_December.Exercise1 exercise11_1 = new();
+// Console.WriteLine($"Result from exercise 1: {exercise11_1.GetResult()}");
+//
+// AdventOfCode2024._11_December.Exercise2 exercise11_2 = new();
+// Console.WriteLine($"Result from exercise 2: {exercise11_2.GetResult()}");
 
-AdventOfCode2024._11_December.Exercise2 exercise11_2 = new();
-Console.WriteLine($"Result from exercise 2: {exercise11_2.GetResult()}");
+AdventOfCode2024._12_December.Exercise1 exercise12_1 = new();
+Console.WriteLine($"Result from exercise 1: {exercise12_1.GetResult()}");
+
+AdventOfCode2024._12_December.Exercise2 exercise12_2 = new();
+Console.WriteLine($"Result from exercise 2: {exercise12_2.GetResult()}");
