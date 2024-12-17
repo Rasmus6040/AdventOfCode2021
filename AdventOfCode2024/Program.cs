@@ -88,8 +88,20 @@ using AdventOfCode2024._1_December;
 // AdventOfCode2024._14_December.Exercise2 exercise14_2 = new();
 // Console.WriteLine($"Result from exercise 2: {exercise14_2.GetResult()}");
 
-AdventOfCode2024._15_December.Exercise1 exercise15_1 = new();
-Console.WriteLine($"Result from exercise 1: {exercise15_1.GetResult()}");
+// AdventOfCode2024._15_December.Exercise1 exercise15_1 = new();
+// Console.WriteLine($"Result from exercise 1: {exercise15_1.GetResult()}");
 
-AdventOfCode2024._15_December.Exercise2 exercise15_2 = new();
-Console.WriteLine($"Result from exercise 2: {exercise15_2.GetResult()}");
+// AdventOfCode2024._15_December.Exercise2 exercise15_2 = new();
+// Console.WriteLine($"Result from exercise 2: {await exercise15_2.GetResult()}");
+
+// AdventOfCode2024._16_December.Exercise1 exercise16_1 = new();
+// Console.WriteLine($"Result from exercise 1: {exercise16_1.GetResult()}");
+//
+// AdventOfCode2024._16_December.Exercise2 exercise16_2 = new();
+// Console.WriteLine($"Result from exercise 2: {exercise16_2.GetResult()}");
+
+AdventOfCode2024._17_December.Exercise1 exercise17_1 = new();
+Console.WriteLine($"Result from exercise 1: {exercise17_1.GetResult()}");
+
+AdventOfCode2024._17_December.Exercise2 exercise17_2 = new();
+Console.WriteLine($"Result from exercise 2: {exercise17_2.GetResult()}");
